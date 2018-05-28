@@ -13,4 +13,21 @@
     <context:annotation-config/>
     <context:component-scan base-package="com.mr.prac.controller"/>
     <mvc:annotation-driven/>
+
+    <bean id="animal" class="com.mr.prac.reflect.Cat">
+        <property name="name" value="kitty"/>
+    </bean>
+
+    <bean id="test" class="com.mr.prac.reflect.Test">
+        <property name="testMap">
+            <map>
+                <entry key="animal">
+                    <value>com.mr.prac.reflect.Cat</value>
+                </entry>
+                <entry key="b">
+                    <value>2</value>
+                </entry>
+            </map>
+        </property>
+    </bean>
 </beans>
